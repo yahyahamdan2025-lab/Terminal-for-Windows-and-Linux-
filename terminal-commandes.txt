@@ -1,0 +1,201 @@
+GUIDE DES COMMANDES DU TERMINAL LOCAL
+=====================================
+
+Le terminal utilise CMD comme mode par défaut. Il ne contient pas toutes les
+commandes de tous les systèmes : chaque shell et chaque programme a ses propres
+commandes. Les outils externes doivent être installés sur le PC.
+
+
+COMMANDES PROPRES AU TERMINAL
+-----------------------------
+
+aide
+    Affiche le guide résumé dans la fenêtre du terminal.
+
+cls
+clear
+    Efface l'affichage de la fenêtre du terminal.
+
+quitter
+    Ferme la fenêtre du terminal.
+
+run <fichier> [arguments]
+    Lance un fichier avec le programme correspondant à son extension :
+      .cmd ou .bat : script CMD
+      .ps1         : script PowerShell
+      .py          : script Python (Python doit être installé)
+      .js          : script JavaScript avec Node.js (Node.js doit être installé)
+
+    Exemples :
+      run dj.py
+      run bonjour.js
+      run "mon script.py"
+      run traitement.py argument1
+
+
+COMMANDES CMD (MODE PAR DÉFAUT)
+-------------------------------
+
+Tape directement une commande CMD, par exemple :
+  dir
+  cd Documents
+  echo Bonjour
+
+Commandes intégrées fréquentes :
+  assoc       Affiche ou modifie les associations d'extensions de fichiers.
+  call        Appelle un autre fichier .bat ou .cmd.
+  cd, chdir   Affiche ou change de dossier.
+  cls         Efface l'écran CMD.
+  color       Change les couleurs de la fenêtre CMD.
+  copy        Copie des fichiers.
+  date, time  Affiche ou modifie la date et l'heure.
+  del, erase  Supprime des fichiers.
+  dir         Liste les fichiers et dossiers.
+  echo        Affiche un texte ou active/désactive l'affichage des commandes.
+  endlocal    Termine les changements d'environnement locaux d'un script.
+  exit        Ferme CMD (dans ce terminal, utilise plutôt « quitter »).
+  for         Répète une commande pour plusieurs éléments.
+  ftype       Affiche ou modifie le type associé à une extension.
+  goto        Va à une étiquette dans un script .bat/.cmd.
+  if          Exécute une commande selon une condition.
+  md, mkdir   Crée un dossier.
+  mklink      Crée un lien symbolique ou physique.
+  move        Déplace des fichiers.
+  path        Affiche ou modifie les chemins des programmes.
+  pause       Attend une touche dans un script.
+  popd        Revient au dossier enregistré par pushd.
+  prompt      Modifie l'invite de commande CMD.
+  pushd       Enregistre le dossier actuel et en ouvre un autre.
+  rd, rmdir   Supprime un dossier.
+  rem         Ajoute un commentaire dans un script.
+  ren, rename Renomme un fichier ou dossier.
+  set         Affiche ou modifie des variables d'environnement.
+  setlocal    Localise les changements d'environnement dans un script.
+  shift       Décale les arguments d'un script.
+  start       Ouvre un programme ou une fenêtre.
+  title       Change le titre de la fenêtre CMD.
+  type        Affiche le contenu d'un fichier texte.
+  ver         Affiche la version de Windows.
+  verify      Contrôle l'écriture des fichiers.
+  vol         Affiche le nom et le numéro de série d'un volume.
+
+Pour afficher l'aide intégrée de CMD :
+  help
+Pour l'aide d'une commande particulière :
+  help dir
+  dir /?
+
+Commandes Windows courantes (programmes externes) :
+  ipconfig       Informations réseau.
+  ping <hôte>    Teste la réponse d'un hôte réseau.
+  tracert <hôte> Suit le trajet réseau jusqu'à un hôte.
+  tasklist       Liste les processus en cours.
+  whoami         Affiche le compte Windows actuel.
+  where <nom>    Recherche un programme dans PATH.
+  findstr <texte> Recherche du texte dans une sortie ou un fichier.
+  robocopy      Copie des dossiers et des fichiers.
+  systeminfo    Affiche des informations sur Windows et l'ordinateur.
+
+Exemples :
+  ipconfig
+  ping example.com
+  dir /?
+  dir | findstr ".py"
+  echo Bonjour > message.txt
+  echo Une autre ligne >> message.txt
+
+Les commandes d'administration peuvent nécessiter une fenêtre lancée en
+administrateur. N'utilise pas de commande dont tu ne comprends pas les effets.
+
+
+POWERSHELL
+----------
+
+Ajoute « ps » devant une commande pour l'exécuter dans Windows PowerShell.
+Exemples :
+  ps Get-Location
+  ps Get-ChildItem
+  ps Get-Process
+  ps Get-Service
+  ps Get-Command
+  ps Write-Output "Bonjour"
+  ps Set-Location C:\Windows
+
+Commandes PowerShell courantes :
+  Get-Location       Affiche le dossier actuel.
+  Set-Location       Change de dossier.
+  Get-ChildItem      Liste les fichiers et dossiers (alias : dir, ls, gci).
+  Copy-Item          Copie un élément.
+  Move-Item          Déplace un élément.
+  Remove-Item        Supprime un élément.
+  New-Item           Crée un fichier ou un dossier.
+  Get-Content        Lit un fichier.
+  Set-Content        Écrit dans un fichier.
+  Add-Content        Ajoute du texte à un fichier.
+  Get-Process        Liste ou recherche des processus.
+  Get-Service        Liste ou recherche des services.
+  Get-Command        Recherche une commande.
+  Get-Help           Affiche l'aide PowerShell.
+  Write-Output       Affiche une valeur.
+
+
+BASH / LINUX AVEC WSL
+---------------------
+
+Ajoute « bash » devant une commande pour l'exécuter dans Bash via WSL.
+Exemples :
+  bash pwd
+  bash ls -la
+  bash whoami
+  bash grep "texte" fichier.txt
+  bash cat fichier.txt
+
+Commandes Linux courantes :
+  pwd           Affiche le dossier actuel.
+  ls            Liste les fichiers et dossiers.
+  cd            Change de dossier.
+  mkdir         Crée un dossier.
+  cp            Copie des fichiers.
+  mv            Déplace ou renomme des fichiers.
+  rm            Supprime des fichiers.
+  cat           Affiche un fichier.
+  grep          Recherche du texte.
+  find          Recherche des fichiers.
+  echo          Affiche du texte.
+  whoami        Affiche l'utilisateur courant.
+  uname         Affiche des informations système.
+  man <commande> Affiche le manuel d'une commande, si disponible.
+
+WSL et une distribution Linux doivent être installés et configurés. Vérifie
+l'installation depuis CMD avec :
+  wsl --list --verbose
+Si aucune distribution n'apparaît, le mode Bash ne peut pas encore fonctionner.
+
+
+PYTHON ET JAVASCRIPT
+--------------------
+
+Les langages ne sont pas intégrés à l'EXE. Le lanceur correspondant doit être
+installé et accessible depuis Windows.
+
+  run mon-script.py
+  run mon-script.js
+
+Si Python ou Node.js n'est pas installé, son script ne pourra pas s'exécuter.
+
+
+OPÉRATEURS CMD UTILES
+---------------------
+
+  commande1 & commande2       Exécute ensuite la deuxième commande.
+  commande1 && commande2      Exécute la deuxième si la première réussit.
+  commande1 || commande2      Exécute la deuxième si la première échoue.
+  commande1 | commande2       Transmet la sortie de la première commande.
+  commande > fichier.txt      Écrit la sortie dans un fichier.
+  commande >> fichier.txt     Ajoute la sortie à la fin d'un fichier.
+  commande < fichier.txt      Lit l'entrée depuis un fichier.
+  commande 2> erreurs.txt     Écrit les erreurs dans un fichier.
+
+Les guillemets permettent de traiter les chemins contenant des espaces :
+  cd "C:\Users\Yahya\Desktop\Nouveau dossier"
+
